@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folk Artist Details</title>
+<link rel="icon" type="image/x-icon" sizes="32x32" href="./img/male.ico">
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fenix&family=Rosarivo:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fenix&family=Merienda:wght@300..900&family=Rosarivo:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fenix&family=Merienda:wght@300..900&family=Rosarivo:ital@0;1&family=Yatra+One&display=swap');
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+    }
+    .container {
+        width: 50%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    h1 {
+        font-family: "Yatra One", system-ui;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .details {
+        font-family: "Fenix", serif;
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Adjusted column ratio */
+        grid-gap: 20px;
+    }
+    .label {
+        font-weight: bold;
+    }
+    .value {
+        font-weight: normal;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    /* Style for the button */
+    .book-button {
+        display: flex;
+        margin-top: 100px; /* Add margin to separate from details */
+        height: 30%;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-around;
+    }
+    /* Image style */
+    .artist-photo {
+        max-width: 25%;
+        padding-left: 37%;
+        height: auto;
+        border-radius: 5px;
+    }
+    /* QR code style */
+    .qr-code {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Folk Artist Details</h1>
+
+        <img class="artist-photo" src="./img/menu-6.png" alt="Artist Photo">
+        <br> <br>
+        <div class="details">
+            <div class="label">Name:</div>
+            <div class="value">Vimal</div>
+
+            <div class="label">Mobile Number:</div>
+            <div class="value">+91 90805 32372</div>
+
+            <div class="label">Art Style:</div>
+            <div class="value">Karakaatam Artist</div>
+
+            <div class="label">Country:</div>
+            <div class="value">India</div>
+
+            <div class="label">Years of Experience:</div>
+            <div class="value">4</div>
+
+            <div class="label">Description:</div>
+            <div class="value">As a Karakattam artist, I dance with balanced pots, embodying tradition's spirit, rhythmically moving to ancient tunes, captivating spectators with cultural vibrancy.</div>
+
+            <div class="booking"><h3>For Booking Contact:</h3>
+            <div id="qr-code" class="qr-code"></div>
+        </div>
+
+        <!-- Button to book artist -->
+        <a href="./payment/artist6.html" class="book-button">Click to Pay Booking Advance</a>
+    </div>
+
+    <!-- Include the QRCode.js library -->
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <script>
+        // Generate QR code for the mobile number
+        var qrCode = new QRCode(document.getElementById("qr-code"), {
+            width: 200,
+            height: 200,
+            colorDark : "#000",
+            colorLight : "#fff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // Set the mobile number for the QR code
+        qrCode.makeCode("+91 90805 32372");
+    </script>
+</body>
+</html>

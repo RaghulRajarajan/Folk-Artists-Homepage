@@ -1,0 +1,103 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+
+
+body {
+  min-height: 100vh;
+  padding: 70px 0px;
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.container {
+  position: absolute;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+header,
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+header .chip {
+  width: 60px;
+}
+h6 {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+}
+h5.number {
+  margin-top: 4px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+h5.name {
+  margin-top: 20px;
+}
+.container .card-details {
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.qr-code {
+  margin-top: 120px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow */
+}
+#qr{
+  width: 250px;
+  height: 250px;
+  margin-left: 90px;
+  border-radius: 10px;
+}
+#BHIM-UPI{
+  width: 200px;
+  height: 100px;
+  margin-left: 115px;
+}
+#payment{
+  height: 90px;
+  margin-left: 140px;
+  margin-top: -40px;
+}
+p{
+  font-style: italic;
+}
+
+h6.upi{
+  width: 5px;
+  height: 5px;
+}
